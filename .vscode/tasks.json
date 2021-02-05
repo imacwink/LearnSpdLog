@@ -1,0 +1,28 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "g++",
+            "windows": {
+                "args": [
+                    "${workspaceRoot}/src/*.cpp",
+                    "-g",
+                    "--std=c++17",
+                    "-I${workspaceRoot}/dependencies/spdlog/include",
+                    "-o",
+                    "${workspaceRoot}/builds/windows/main"
+                ]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
